@@ -80,17 +80,19 @@
         }
       ]
     },
+    "mac": {
+      "target": [
+        "zip"
+      ]
+    },
     "win": {
       "target": [
-        "nsis",
-        "msi"
+        "zip"
       ]
     },
     "linux": {
       "target": [
-        "deb",
-        "rpm",
-        "AppImage"
+        "zip"
       ],
       "category": "Development"
     },
