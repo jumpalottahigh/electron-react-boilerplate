@@ -4,20 +4,16 @@ on: push
 
 jobs:
   release:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macos-10.14, windows-2019, ubuntu-18.04]
+    runs-on: macos-latest
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Install Node.js, NPM and Yarn
         uses: actions/setup-node@v1
         with:
-          node-version: 13
+          node-version: 12
 
       - name: yarn install
         run: |
