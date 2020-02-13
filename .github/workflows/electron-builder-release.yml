@@ -3,7 +3,7 @@ name: Electron Builder Release
 on:
   push:
     tags:
-      - 'PAUSE-THIS-WORKFLOW-v*'
+      - 'v*'
 
 jobs:
   release:

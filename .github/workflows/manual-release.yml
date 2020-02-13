@@ -3,7 +3,7 @@ name: Manual Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'PAUSE-THIS-WORKFLOW-v*'
 
 jobs:
   release:
