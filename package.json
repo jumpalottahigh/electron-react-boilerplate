@@ -36,7 +36,7 @@
     "test-e2e": "node -r @babel/register ./internals/scripts/CheckBuildsExist.js && cross-env NODE_ENV=test testcafe electron:./app ./test/e2e/HomePage.e2e.js",
     "test-e2e-live": "node -r @babel/register ./internals/scripts/CheckBuildsExist.js && cross-env NODE_ENV=test testcafe --live electron:./app ./test/e2e/HomePage.e2e.js",
     "test-watch": "yarn test --watch",
-    "release": "cd app && yarn version --patch && cd - && yarn version --patch && git push --tag && git push"
+    "release": "cd app && yarn config set version-git-tag false && yarn version --patch && cd - && yarn config set version-git-tag true && yarn version --patch && git push --tag && git push"
   },
   "lint-staged": {
     "*.{js,jsx}": [
