@@ -1,4 +1,4 @@
-name: Testing
+name: Manual Release
 
 on:
   push:
@@ -19,7 +19,9 @@ jobs:
           node-version: 12
 
       - name: Install dependencies
-        run: yarn install
+        run: |
+          yarn cache clean
+          yarn install
 
       - name: Package app
         env:
